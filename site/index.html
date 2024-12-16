@@ -6,12 +6,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="parte.js">
+
+    </script>
 
     <title>Pe de Vento Calcados</title>
+
+
     <style>
-      
-
-
         /*fonte home--> */
 
         #home h2 {
@@ -113,26 +115,68 @@
             /* Linha sublinhada expande para todo o texto */
 
         }
+
         nav img {
             height: 65px;
             margin-left: 20px;
-            
-         
-            
-            
+
+
+
+
 
         }
-        
+
 
         .container {
             padding: 2rem;
         }
+
 
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
+
+        /* Estilo dos botões */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e2c77;
+            color: #f0f8ff;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+
+        /* Específicos para os botões */
+        .cart-btn {
+            background-color: #1c7e65;
+        }
+
+        .cart-btn:hover {
+            background-color: #cc7a00;
+        }
+
+        .back-btn {
+            background-color: #333;
+        }
+
+        .back-btn:hover {
+            background-color: #555;
+        }
+
 
         .product {
             background: #fff;
@@ -207,15 +251,15 @@
     <header>
         <h1>Bem-vindo à Loja de Tênis Pé de Vento</h1>
     </header>
-    
+
     <nav>
         <img src="../imagens/logo-search-grid-1x.png" alt="logo">
         <a href="#home">Home
-        
+
             <img src="../imagens/home_10023074.png" alt="home">
         </a>
         <a href="#produtos">Produtos
-            
+
             <img src="../imagens/produtos.png" alt="produtos">
         </a>
         <a href="#sobre">Sobre Nós
@@ -246,67 +290,145 @@
                 <img src="../imagens/tenis03.png" alt="tenis03">
                 <h3>Tênis Esportivo</h3>
                 <p>R$ 199,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis03.png" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Esportivo', 199.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis04.jpeg" alt="tenis04">
-                <h3>Tênis Casual</h3>
-                <p>R$ 149,99</p>
+                <h3>Tênis Esportivo</h3>
+                <p>R$ 199,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis04.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Esportivo', 199.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis05.jpeg" alt="tenis05">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis05.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <!-- Adicione mais produtos aqui -->
             <div class="product">
                 <img src="../imagens/tenis06.jpeg" alt="tenis06">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis06.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis07.jpeg" alt="tenis07">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis07.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis08.jpeg" alt="tenis08">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis08.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis09.jpeg" alt="tenis09">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis09.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+
+
             </div>
             <div class="product">
                 <img src="../imagens/tenis10.jpeg" alt="tenis10">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis10.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenislrj01.jpeg" alt="tenislrj01">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenislrj01.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenisnike02.jpeg" alt="tenisnike02">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenisnike02.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis11.jpeg" alt="tenis11">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis11.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
             <div class="product">
                 <img src="../imagens/tenis12.jpeg" alt="tenis12">
                 <h3>Tênis Running</h3>
                 <p>R$ 299,99</p>
+                <div class="buttons">
+                    <a href="../imagens/tenis12.jpeg" target="_blank" class="btn">Ver Detalhes</a>
+                    <button class="btn cart-btn" onclick="addToCart('Tênis Running', 299.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
             </div>
+
             
+            
+
+
             <hr>
         </div>
-            </div>
+    </div>
 
     <div class="container" id="sobre">
         <h2>Sobre Nós</h2>
