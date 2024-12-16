@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pe de Vento Calcados</title>
+    <style>
+      
+
+
+        /*fonte home--> */
+
+        #home h2 {
+            font-family: 'Roboto Slab', serif;
+            /* Fonte estilosa no título */
+            font-size: 2.5rem;
+            /* Tamanho maior */
+            font-weight: 700;
+            /* Negrito */
+            color: #333333;
+            /* Cor escura elegante */
+            margin-bottom: 0.5rem;
+        }
+
+        #home p {
+            font-family: 'Roboto Slab', serif;
+            /* Aplica a fonte no parágrafo */
+            font-size: 1.2rem;
+            /* Tamanho médio */
+            color: #333;
+            /* Cor um pouco mais clara */
+            line-height: 1.6;
+            /* Melhora o espaçamento das linhas */
+            font-weight: 400;
+            /* Peso normal para o texto */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1c7e65;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #1e2c77;
+            /* Fundo escuro */
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombra para destaque */
+            position: sticky;
+            /* Fixa o menu no topo */
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            /* Tamanho da fonte maior */
+            font-weight: 500;
+            /* Fonte mais destacada */
+            margin: 0 1.5rem;
+            /* Espaçamento entre os links */
+            position: relative;
+            padding: 0.2rem 0;
+            /* Espaço interno para o efeito */
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+
+
+        }
+
+        /* Efeito ao passar o mouse */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #0d9e00;
+            /* Cor da linha */
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+            /* Suaviza o crescimento da linha */
+
+
+        }
+
+        nav a:hover {
+            color: #0d9e00;
+            /* Cor do texto ao passar o mouse */
+
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            /* Linha sublinhada expande para todo o texto */
+
+        }
+        nav img {
+            height: 65px;
+            margin-left: 20px;
+            
+         
+            
+            
+
+        }
+        
+
+        .container {
+            padding: 2rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            overflow: hidden;
+            /* Evita que a imagem ultrapasse os limites do container */
+            transition: background-color 0.3s ease;
+            /* Transição para o fundo */
+        }
+
+        .product:hover {
+            background-color: #f0f8ff;
+            /* Altere a cor de fundo ao passar o mouse */
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            /* Suaviza rotação e cores */
+        }
+
+        .product img:hover {
+            transform: rotate(10deg) scale(1.1);
+            /* Aplica rotação e zoom */
+            filter: brightness(1.2) contrast(1.1);
+            /* Aumenta o brilho e contraste */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        #contato p {
+            font-size: 1.2rem;
+            /* Tamanho da fonte */
+            color: #555;
+            /* Cor do texto */
+            line-height: 1.6;
+            /* Espaçamento entre as linhas */
+        }
+
+        #contato i {
+            margin-right: 10px;
+            /* Espaçamento entre o ícone e o texto */
+            color: #333;
+            /* Cor dos ícones */
+        }
+
+        #contato a {
+            color: #555;
+            /* Cor do link */
+            text-decoration: none;
+            /* Remover sublinhado */
+        }
+
+        #contato a:hover {
+            color: #ff9800;
+            /* Cor ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo à Loja de Tênis Pé de Vento</h1>
+    </header>
+    
+    <nav>
+        <img src="../imagens/logo-search-grid-1x.png" alt="logo">
+        <a href="#home">Home
+        
+            <img src="../imagens/home_10023074.png" alt="home">
+        </a>
+        <a href="#produtos">Produtos
+            
+            <img src="../imagens/produtos.png" alt="produtos">
+        </a>
+        <a href="#sobre">Sobre Nós
+            <img src="../imagens/group_12099581.png" alt="grupo">
+        </a>
+        <a href="#contato">Contato
+            <img src="../imagens/telephone-contacts_17580693.png" alt="Telefone">
+        </a>
+    </nav>
+
+
+    <div class="container" id="home">
+        <h2>Home</h2>
+        <p>
+            Na Pé de Vento, você encontra os melhores tênis para todas as ocasiões, combinando estilo,
+            conforto e alta qualidade. Oferecemos uma seleção exclusiva de modelos,
+            das melhores marcas, para atender suas necessidades no dia a dia,
+            esportes ou lazer. Com atendimento personalizado e preços competitivos,
+            transformamos cada passo em uma conquista.
+            Escolha a Pé de Vento e caminhe com o melhor!</p>
+    </div>
+    <hr>
+
+    <div class="container" id="produtos">
+        <h2>Produtos</h2>
+        <div class="products">
+            <div class="product">
+                <img src="../imagens/tenis03.png" alt="tenis03">
+                <h3>Tênis Esportivo</h3>
+                <p>R$ 199,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis04.jpeg" alt="tenis04">
+                <h3>Tênis Casual</h3>
+                <p>R$ 149,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis05.jpeg" alt="tenis05">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+            <div class="product">
+                <img src="../imagens/tenis06.jpeg" alt="tenis06">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis07.jpeg" alt="tenis07">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis08.jpeg" alt="tenis08">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis09.jpeg" alt="tenis09">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis10.jpeg" alt="tenis10">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenislrj01.jpeg" alt="tenislrj01">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenisnike02.jpeg" alt="tenisnike02">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis11.jpeg" alt="tenis11">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            <div class="product">
+                <img src="../imagens/tenis12.jpeg" alt="tenis12">
+                <h3>Tênis Running</h3>
+                <p>R$ 299,99</p>
+            </div>
+            
+            <hr>
+        </div>
+            </div>
+
+    <div class="container" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma loja especializada em oferecer tênis de alta qualidade para todas as necessidades.</p>
+    </div>
+    <hr>
+
+    <div class="container" id="contato">
+        <h2>Contato</h2>
+        <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contato@lojatenis.com.br">contato@lojatenis.com.br</a>
+        </p>
+        <p><i class="fas fa-phone-alt"></i>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+        <!-- Redes sociais -->
+        <p><i class="fab fa-facebook"></i><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+        <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+        <p><i class="fab fa-twitter"></i><a href="https://www.twitter.com" target="_blank">Twitter</a></p>
+    </div>
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 Loja de Tênis Pé de Vento. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
